@@ -233,6 +233,13 @@
     overflow: hidden;
   }
   
+  .services .service-card-img-3 {
+    flex: 1;
+    aspect-ratio: 3/4;
+    border-radius: 2em;
+    overflow: hidden;
+  }
+
   .services #service-card-1 .service-card-inner {
     background-color: var(--accent1);
   }
