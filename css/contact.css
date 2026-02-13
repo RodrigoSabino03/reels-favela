@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 1.5em;
+  padding-top: clamp(100px, 14vw, 160px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
@@ -14,11 +15,12 @@
 .logo-img {
   position: absolute;
   left: 1em;
-  top: -2em;
+  top: 0.5em;
   width: clamp(80px, 12vw, 150px);
   height: clamp(80px, 12vw, 150px);
   object-fit: cover;
   border-radius: 0.75em;
+  z-index: 10;
 }
 
 .contact .trail-img {
@@ -417,8 +419,10 @@
   }
 
   .logo-img {
-    top: -1em;
+    top: 0.25em;
     left: 0.5em;
+    width: 70px;
+    height: 70px;
   }
 
   .submit-btn {

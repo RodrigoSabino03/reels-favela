@@ -186,6 +186,9 @@
 @media (max-width: 1000px) {
   .about-hero {
     padding: 8em 2em 4em 2em;
+    height: auto;
+    min-height: 100svh;
+    gap: 2em;
   }
 
 
@@ -194,14 +197,17 @@
   }
 
   .about-hero .about-hero-portrait {
-    width: 25%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: rotate(0deg);
+    width: 40%;
+    margin: 1em auto;
   }
 
   .about-hero .about-hero-portrait img {
-    position: absolute;
-    height: 110%;
+    width: 100%;
+    height: auto;
   }
 
   .about-copy .about-copy-content {
@@ -246,7 +252,7 @@
   }
 
   .about-hero .about-hero-portrait {
-    width: 35%;
+    width: 45%;
   }
 
   .about-copy {
