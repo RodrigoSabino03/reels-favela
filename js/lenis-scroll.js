@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Wait for DOM to fully load before executing
 document.addEventListener("DOMContentLoaded", () => {
   // Determine if device is mobile (width <= 900px)
-  let isMobile = window.innerWidth <= 900;
+  let isMobile = window.innerWidth <= 1000;
 
   // Define scroll settings for mobile and desktop
   const scrollSettings = isMobile
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle window resize to update scroll settings
   const handleResize = () => {
     const wasMobile = isMobile; // Store previous mobile state
-    isMobile = window.innerWidth <= 900; // Update mobile state
+    isMobile = window.innerWidth <= 1000; // Update mobile state
 
     // Reinitialize Lenis only if mobile state changes
     if (wasMobile !== isMobile) {

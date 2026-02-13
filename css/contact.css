@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding: 1.5em;
   display: grid;
@@ -11,10 +11,20 @@
   overflow: hidden;
 }
 
+.logo-img {
+  position: absolute;
+  left: 1em;
+  top: -2em;
+  width: clamp(80px, 12vw, 150px);
+  height: clamp(80px, 12vw, 150px);
+  object-fit: cover;
+  border-radius: 0.75em;
+}
+
 .contact .trail-img {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: clamp(80px, 10vw, 120px);
+  height: clamp(80px, 10vw, 120px);
   object-fit: cover;
   border-radius: 0.75em;
   transform-origin: center;
@@ -145,7 +155,7 @@
   font-family: "rader";
   font-style: italic;
   line-height: 0.95;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
   margin-bottom: 0.4em;
   color: var(--fg);
 }
@@ -370,10 +380,6 @@
   .contact-card-header-main h1 {
     font-size: clamp(2rem, 5vw, 3rem);
   }
-  
-  .form-header h2 {
-    font-size: 2rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -396,8 +402,26 @@
   .contact-card-header-main h1 {
     font-size: clamp(1.75rem, 8vw, 2rem);
   }
-  
-  .form-header h2 {
-    font-size: clamp(1.25rem, 6vw, 1.5rem);
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 0.75em;
+    gap: 1em;
+    min-height: auto;
+  }
+
+  .contact-form-container {
+    padding: 1.25em;
+    box-shadow: 4px 4px 0px var(--fg);
+  }
+
+  .logo-img {
+    top: -1em;
+    left: 0.5em;
+  }
+
+  .submit-btn {
+    padding: 0.75em 1.5em;
   }
 }

@@ -1,7 +1,7 @@
 /* footer */
 footer {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 85svh;
     color: var(--bg);
     padding: 2em;
@@ -74,7 +74,7 @@ footer {
     position: absolute;
     bottom: -200px;
     left: 50%;
-    width: 150px;
+    width: clamp(80px, 12vw, 150px);
     border-radius: 1rem;
     height: auto;
     object-fit: cover;
@@ -99,6 +99,22 @@ footer {
   
     footer .explosion-container {
       display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer {
+      min-height: 70svh;
+      padding: 1em;
+    }
+
+    footer .footer-container {
+      padding: 1em;
+      border-radius: 1em;
+    }
+
+    footer .footer-symbols {
+      padding: 1em;
     }
   }
   

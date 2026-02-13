@@ -3,7 +3,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     padding-top: 1em;
     padding-right: 1em;
     display: flex;
@@ -49,7 +49,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100svh;
     background-color: var(--bg2);
     overflow: hidden;
@@ -179,6 +179,16 @@ nav {
   
     .nav-overlay .nav-footer-item:nth-child(3) .nav-footer-item-header {
       justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-overlay .nav-items .nav-item p {
+      font-size: 1.25rem;
+    }
+
+    .nav-overlay .nav-footer {
+      padding: 1em;
     }
   }
   

@@ -51,15 +51,15 @@
   }
   
   h1 {
-    font-size: 5rem;
+    font-size: clamp(2rem, 1rem + 4vw, 5rem);
   }
-  
+
   h2 {
-    font-size: 4rem;
+    font-size: clamp(1.75rem, 1rem + 3vw, 4rem);
   }
-  
+
   h3 {
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 0.75rem + 1.5vw, 2rem);
   }
   
   a {
@@ -70,7 +70,7 @@
   p,
   p.ss {
     font-family: "formula-narrow";
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
     font-weight: 600;
     line-height: 1.125;
   }
@@ -86,7 +86,7 @@
   /* contact cta */
   .contact-cta {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100svh;
     padding: 2em;
     display: flex;
@@ -96,8 +96,8 @@
   
   .contact-cta .contact-button {
     position: relative;
-    width: 60%;
-    height: 300px;
+    width: clamp(280px, 60%, 900px);
+    height: clamp(180px, 25vw, 300px);
     border: 0.75em solid #000;
     border-radius: 20em;
     background: linear-gradient(
@@ -158,7 +158,7 @@
   }
   
   .contact-cta .contact-text-large h1 {
-    font-size: 5rem;
+    font-size: clamp(1.5rem, 0.75rem + 2.5vw, 3rem);
   }
   
   @keyframes gradientMove {
@@ -183,28 +183,33 @@
   }
   
   @media (max-width: 1000px) {
-    h1 {
-      font-size: 2.5rem;
-    }
-  
     .contact-cta {
       height: max-content;
       padding: 8em 2em;
     }
-  
+
     .contact-cta .contact-button {
       width: 95%;
-      height: 250px;
+      height: clamp(180px, 30vw, 250px);
       gap: 1em;
       border-radius: 2em;
     }
-  
+
     .contact-cta .contact-text-small {
       width: 75%;
       text-align: center;
     }
-  
-    .contact-cta .contact-text-large h1 {
-      font-size: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    .contact-cta {
+      padding: 4em 1em;
+    }
+
+    .contact-cta .contact-button {
+      width: 100%;
+      border-radius: 1.5em;
+      border: 0.5em solid #000;
+      box-shadow: 6px 6px 0px 3px #000000;
     }
   }

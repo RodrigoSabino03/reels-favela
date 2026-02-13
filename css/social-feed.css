@@ -17,7 +17,7 @@
   font-family: "urban-sketart";
   text-transform: uppercase;
   letter-spacing: 0.10em;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 0.75rem + 1.5vw, 2rem);
 }
 
 .social-feed-grid {
@@ -85,9 +85,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .social-feed-header h2 {
-    font-size: 1.5rem;
-  }
 }
 
 @media (max-width: 600px) {
@@ -97,5 +94,16 @@
 
   .social-feed {
     padding: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-feed {
+    padding: 1em;
+    border-radius: 12px;
+  }
+
+  .social-card-body {
+    padding: 0.75em;
   }
 }

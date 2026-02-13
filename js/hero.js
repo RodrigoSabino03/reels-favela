@@ -56,7 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initAnimations();
 
   // Re-run animations on window resize to recalculate trigger points
+  let resizeTimeout;
   window.addEventListener("resize", () => {
-    initAnimations();
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(initAnimations, 200);
   });
 });

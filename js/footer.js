@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const particle = document.createElement("img");
         particle.src = path;
         particle.classList.add("explosion-particle-img"); // Add class for styling
-        particle.style.width = `${config.imageSize}px`; // Set image size
+        const responsiveSize = Math.min(150, window.innerWidth * 0.12);
+      particle.style.width = `${responsiveSize}px`; // Set responsive image size
         explosionContainer.appendChild(particle); // Add to container
       });
     };

@@ -1,7 +1,7 @@
 /* about - hero */
 .about-hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100svh;
   padding: 8em 2em 6em 2em;
   display: flex;
@@ -19,12 +19,12 @@
 }
 
 .about-hero .about-hero-header h1 {
-  font-size: 7.5rem;
+  font-size: clamp(2.5rem, 1rem + 6vw, 7.5rem);
 }
 
 .about-hero .about-hero-bio {
   text-align: center;
-  width: 50%;
+  width: min(50%, 600px);
 }
 
 .about-hero .about-hero-portrait {
@@ -49,14 +49,14 @@
 /* about - about copy */
 .about-copy {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   padding: 8em 2em 8em 2em;
 }
 
 .about-copy .about-copy-content {
   text-align: center;
-  width: 50%;
+  width: min(50%, 600px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -188,9 +188,6 @@
     padding: 8em 2em 4em 2em;
   }
 
-  .about-hero .about-hero-header h1 {
-    font-size: 4rem;
-  }
 
   .about-hero .about-hero-bio {
     width: 100%;
@@ -240,5 +237,39 @@
   .stats .stats-header {
     gap: 2em;
     margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 6em 1em 3em 1em;
+  }
+
+  .about-hero .about-hero-portrait {
+    width: 35%;
+  }
+
+  .about-copy {
+    padding: 4em 1em;
+  }
+
+  .about-copy .about-copy-content {
+    padding: 2em 1em;
+  }
+
+  .skills {
+    padding: 2em 1em;
+  }
+
+  .stats {
+    padding: 4em 1em;
+  }
+
+  .stats .stats-item-1,
+  .stats .stats-item-2,
+  .stats .stats-item-3 {
+    aspect-ratio: auto;
+    min-height: 120px;
+    padding: 1.5em;
   }
 }
