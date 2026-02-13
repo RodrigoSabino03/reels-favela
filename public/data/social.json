@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "/images/posts/post-1.png",
+    "caption": "Behind the scenes of our latest creative shoot in the studio",
+    "platform": "instagram",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "thumbnail": "/images/posts/post-2.png",
+    "caption": "New reel just dropped! Check out the full video",
+    "platform": "tiktok",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "thumbnail": "/images/posts/post-3.png",
+    "caption": "Golden hour vibes hitting different today",
+    "platform": "instagram",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "thumbnail": "/images/posts/post-4.png",
+    "caption": "This transition took 47 takes but we nailed it",
+    "platform": "instagram",
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "thumbnail": "/images/posts/post-5.png",
+    "caption": "Exploring new perspectives in urban photography",
+    "platform": "instagram",
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "thumbnail": "/images/posts/post-6.png",
+    "caption": "POV: when the edit matches the beat perfectly",
+    "platform": "instagram",
+    "link": "#"
+  }
+]

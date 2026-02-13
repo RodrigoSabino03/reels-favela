@@ -1,0 +1,101 @@
+/* social feed */
+.social-feed {
+  width: 100%;
+  background-color: #0a0a0a;
+  border-radius: 16px;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.social-feed-header {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.social-feed-header h2 {
+  color: #ffffff;
+  font-family: "urban-sketart";
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  font-size: 2rem;
+}
+
+.social-feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25em;
+}
+
+.social-card {
+  position: relative;
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.social-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(129, 140, 248, 0.3);
+}
+
+.social-card-thumb {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.social-card-body {
+  padding: 1em;
+}
+
+.social-card-badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 999px;
+  font-family: "supply-mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background-color: #818cf8;
+  margin-bottom: 0.5em;
+}
+
+.social-card-badge.tiktok {
+  background-color: #ef4444;
+}
+
+.social-card-caption {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "formula-narrow", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+@media (max-width: 1000px) {
+  .social-feed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-feed-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-feed-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-feed {
+    padding: 1.5em;
+  }
+}
